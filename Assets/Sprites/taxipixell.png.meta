@@ -1,0 +1,910 @@
+fileFormatVersion: 2
+guid: 809e16fc5d86fbb4193a3582eb4941a1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6759256738184404092
+    second: taxipixell_0
+  - first:
+      213: 1486939114137712579
+    second: taxipixell_1
+  - first:
+      213: 790361247811833041
+    second: taxipixell_2
+  - first:
+      213: -8395844029350643424
+    second: taxipixell_3
+  - first:
+      213: 3692741159628747698
+    second: taxipixell_4
+  - first:
+      213: 1594435957456572035
+    second: taxipixell_5
+  - first:
+      213: -3989031728685109846
+    second: taxipixell_6
+  - first:
+      213: 3926852014407734287
+    second: taxipixell_7
+  - first:
+      213: -7398913976399752630
+    second: taxipixell_8
+  - first:
+      213: -2089669891493819436
+    second: taxipixell_9
+  - first:
+      213: 960612562414255830
+    second: taxipixell_10
+  - first:
+      213: 6825176178410575929
+    second: taxipixell_11
+  - first:
+      213: 8645241928614341647
+    second: taxipixell_12
+  - first:
+      213: 7036354759880698144
+    second: taxipixell_13
+  - first:
+      213: -5604897484218237730
+    second: taxipixell_14
+  - first:
+      213: -6117148434676974161
+    second: taxipixell_15
+  - first:
+      213: 4447296365882897157
+    second: taxipixell_16
+  - first:
+      213: -1804340107650127960
+    second: taxipixell_17
+  - first:
+      213: 9074002938886561170
+    second: taxipixell_18
+  - first:
+      213: -2440598897807294061
+    second: taxipixell_19
+  - first:
+      213: -4911549826672561167
+    second: taxipixell_20
+  - first:
+      213: 5504305346280970324
+    second: taxipixell_21
+  - first:
+      213: 7280359545863558658
+    second: taxipixell_22
+  - first:
+      213: -329390688161423557
+    second: taxipixell_23
+  - first:
+      213: 6108588236464582976
+    second: taxipixell_24
+  - first:
+      213: 3638412961023636871
+    second: taxipixell_25
+  - first:
+      213: -8318063849840026617
+    second: taxipixell_26
+  - first:
+      213: 4413458681479714093
+    second: taxipixell_27
+  - first:
+      213: 7889217629913233374
+    second: taxipixell_28
+  - first:
+      213: 3189353531967659168
+    second: taxipixell_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: taxipixell_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1257
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4836ad60fcb4232a0800000000000000
+      internalID: -6759256738184404092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taxipixell_1
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 1257
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c7ffc40f3ba2a410800000000000000
+      internalID: 1486939114137712579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taxipixell_2
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1257
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dc0f0c0e5de7fa00800000000000000
+      internalID: 790361247811833041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taxipixell_3
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 44
+        width: 702
+        height: 1448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02978f0a658fb7b80800000000000000
+      internalID: -8395844029350643424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taxipixell_4
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 1257
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b3b22b05804f3330800000000000000
+      internalID: 3692741159628747698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taxipixell_5
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 1257
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38e0f4d3e03902610800000000000000
+      internalID: 1594435957456572035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taxipixell_6
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 1257
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aad26fd07cc14a8c0800000000000000
+      internalID: -3989031728685109846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taxipixell_7
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 1257
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f04dc4c0a1bfe7630800000000000000
+      internalID: 3926852014407734287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taxipixell_8
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 1257
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a42150980f6c15990800000000000000
+      internalID: -7398913976399752630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taxipixell_9
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 152
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4db8ea32e400003e0800000000000000
+      internalID: -2089669891493819436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taxipixell_10
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 152
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6deba753908c45d00800000000000000
+      internalID: 960612562414255830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taxipixell_11
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 8
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 938de9ba295e7be50800000000000000
+      internalID: 6825176178410575929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taxipixell_12
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 8
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0cee58cab11af770800000000000000
+      internalID: 8645241928614341647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taxipixell_13
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 8
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0296158bf5726a160800000000000000
+      internalID: 7036354759880698144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taxipixell_14
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 8
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edcf0b22f676732b0800000000000000
+      internalID: -5604897484218237730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taxipixell_15
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 8
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fadfdb0a8e58b1ba0800000000000000
+      internalID: -6117148434676974161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taxipixell_16
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 8
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 503f5536b78f7bd30800000000000000
+      internalID: 4447296365882897157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taxipixell_17
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 8
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a7268d5b32b5f6e0800000000000000
+      internalID: -1804340107650127960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taxipixell_18
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 8
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29d1f27c8955ded70800000000000000
+      internalID: 9074002938886561170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taxipixell_19
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 8
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3918cf8bb30412ed0800000000000000
+      internalID: -2440598897807294061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taxipixell_20
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 8
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f3fc84847ba6dbb0800000000000000
+      internalID: -4911549826672561167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taxipixell_21
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 8
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4585c54ac88336c40800000000000000
+      internalID: 5504305346280970324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taxipixell_22
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 8
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20652581f68090560800000000000000
+      internalID: 7280359545863558658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taxipixell_23
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 8
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3f11df0ae4cd6bf0800000000000000
+      internalID: -329390688161423557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taxipixell_24
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 8
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 041f999e2a016c450800000000000000
+      internalID: 6108588236464582976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taxipixell_25
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 8
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 785bdf79f4d3e7230800000000000000
+      internalID: 3638412961023636871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taxipixell_26
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 8
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70c5443effc409c80800000000000000
+      internalID: -8318063849840026617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taxipixell_27
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 8
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d25567c8941cf3d30800000000000000
+      internalID: 4413458681479714093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taxipixell_28
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 8
+        width: 29
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed73ab2b2a12c7d60800000000000000
+      internalID: 7889217629913233374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taxipixell_29
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 8
+        width: 29
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0acd110b32cd24c20800000000000000
+      internalID: 3189353531967659168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      taxipixell_0: -6759256738184404092
+      taxipixell_1: 1486939114137712579
+      taxipixell_10: 960612562414255830
+      taxipixell_11: 6825176178410575929
+      taxipixell_12: 8645241928614341647
+      taxipixell_13: 7036354759880698144
+      taxipixell_14: -5604897484218237730
+      taxipixell_15: -6117148434676974161
+      taxipixell_16: 4447296365882897157
+      taxipixell_17: -1804340107650127960
+      taxipixell_18: 9074002938886561170
+      taxipixell_19: -2440598897807294061
+      taxipixell_2: 790361247811833041
+      taxipixell_20: -4911549826672561167
+      taxipixell_21: 5504305346280970324
+      taxipixell_22: 7280359545863558658
+      taxipixell_23: -329390688161423557
+      taxipixell_24: 6108588236464582976
+      taxipixell_25: 3638412961023636871
+      taxipixell_26: -8318063849840026617
+      taxipixell_27: 4413458681479714093
+      taxipixell_28: 7889217629913233374
+      taxipixell_29: 3189353531967659168
+      taxipixell_3: -8395844029350643424
+      taxipixell_4: 3692741159628747698
+      taxipixell_5: 1594435957456572035
+      taxipixell_6: -3989031728685109846
+      taxipixell_7: 3926852014407734287
+      taxipixell_8: -7398913976399752630
+      taxipixell_9: -2089669891493819436
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
