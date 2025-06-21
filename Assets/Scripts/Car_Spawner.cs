@@ -114,21 +114,41 @@ public class Car_Spawner : MonoBehaviour
                 break;
             }
         }
-
-        if (isForwardLane)
+        Vector2 carSpawnPosition ;
+        if (!isForwardLane)
         {
-            carRotation = Quaternion.Euler(0, 0, 0); // Forward direction
+            carRotation = Quaternion.Euler(0, 0, 180); // Backward direction
+            carSpawnPosition = new Vector2(selectedLaneXPosition, transform.position.y); // Adjust Y position for backward lanes
+
         }
         else
         {
-            carRotation = Quaternion.Euler(0, 0, 180); // Backward direction
+            carRotation = Quaternion.Euler(0, 0, 0); // Forward direction
+            carSpawnPosition = new Vector2(selectedLaneXPosition, -6f); // Adjust Y position for backward lanes
         }
 
-        GameObject spawnedCar = Instantiate(cars[carIndexToSpawn], new Vector2(selectedLaneXPosition, transform.position.y), carRotation);
+        //GameObject spawnedCar = Instantiate(cars[carIndexToSpawn], new Vector2(selectedLaneXPosition, transform.position.y), carRotation);
+
+        // Instanciar el auto
+        GameObject spawnedCar = Instantiate(cars[carIndexToSpawn], carSpawnPosition, carRotation);
+
+        // Obtener el script Car_Movement del auto instanciado
+        Car_Movement carMovement = spawnedCar.GetComponent<Car_Movement>();
 
 
+
+
+        if (!isForwardLane)
+        {
+            carMovement.speed = 7f; // O el valor que quieras
+            carMovement.direction = Vector2.down; // O la dirección que quieras
+        }
+        else
+        {
+            carMovement.speed = 0.5f; // O el valor que quieras
+            carMovement.direction = Vector2.up; // O la dirección que quieras
+        }
     }
-
     IEnumerator SpawnCars()
     {
         while (true)

@@ -7,6 +7,8 @@ public class Car_Movement : MonoBehaviour
     public Transform transform;
     public float speed = 4f;
 
+    public Vector2 direction = Vector2.down; // Default: top to bottom
+
     void Start()
     {
         transform = GetComponent<Transform>();
@@ -16,13 +18,12 @@ public class Car_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position -= new Vector3(0, speed * Time.deltaTime, 0);
-        
+        transform.position += (Vector3)direction * speed * Time.deltaTime;
 
-        if (transform.position.y < -6f)
+        // Destroy if off-screen (adjust this for your game)
+        if (transform.position.y < -8f || transform.position.y > 8f)
         {
-            Destroy(gameObject); // Destroy the car when it goes off-screen
+            Destroy(gameObject);
         }
-
     }
 }
