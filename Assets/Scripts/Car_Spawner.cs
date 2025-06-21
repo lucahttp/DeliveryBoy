@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Car_Spawner : MonoBehaviour
@@ -16,23 +17,39 @@ public class Car_Spawner : MonoBehaviour
     private float[] _cumulativeCarProbabilities;
     private float[] _allLanes; // Combined array of all lane positions
 
+    // NUEVO: Lista ponderada de lanes
+    private List<float> _weightedLanes;
+
     void Start()
     {
         CalculateCarProbabilities();
 
         // Combine all lanes into a single array for simpler random selection
-        // Create a new array that can hold all backward and forward lanes
         _allLanes = new float[backwardLanes.Length + forwardLanes.Length];
-
-        // Copy backward lanes
         System.Array.Copy(backwardLanes, 0, _allLanes, 0, backwardLanes.Length);
-        // Copy forward lanes after backward lanes
         System.Array.Copy(forwardLanes, 0, _allLanes, backwardLanes.Length, forwardLanes.Length);
 
-        if (_allLanes == null || _allLanes.Length == 0)
+        // NUEVO: Crear la lista ponderada
+        _weightedLanes = new List<float>();
+        // Backward lanes 3 veces cada uno
+        foreach (float lane in backwardLanes)
         {
-            Debug.LogError("Both forward and backward lane arrays are empty! Cannot spawn car.");
-            // Consider stopping the coroutine if no lanes are available
+            _weightedLanes.Add(lane);
+            _weightedLanes.Add(lane);
+            _weightedLanes.Add(lane);
+            _weightedLanes.Add(lane);
+            //_weightedLanes.Add(lane);
+        }
+        // Forward lanes 1 vez cada uno
+        foreach (float lane in forwardLanes)
+        {
+            _weightedLanes.Add(lane);
+            _weightedLanes.Add(lane);
+        }
+
+        if (_weightedLanes == null || _weightedLanes.Count == 0)
+        {
+            Debug.LogError("No lanes available to spawn cars. Check lane arrays.");
             StopAllCoroutines();
             return;
         }
@@ -75,7 +92,7 @@ public class Car_Spawner : MonoBehaviour
             Debug.LogError("Car probabilities not calculated or no cars assigned. Cannot spawn car.");
             return;
         }
-        if (_allLanes == null || _allLanes.Length == 0)
+        if (_weightedLanes == null || _weightedLanes.Count == 0)
         {
             Debug.LogError("No lanes available to spawn cars. Check lane arrays.");
             return;
@@ -100,8 +117,8 @@ public class Car_Spawner : MonoBehaviour
         }
 
         // --- Lane Selection and Rotation ---
-        int laneIndex = Random.Range(0, _allLanes.Length);
-        float selectedLaneXPosition = _allLanes[laneIndex];
+        int laneIndex = Random.Range(0, _weightedLanes.Count);
+        float selectedLaneXPosition = _weightedLanes[laneIndex];
         Quaternion carRotation;
 
         // Determine rotation based on which lane array the selected position belongs to
@@ -114,20 +131,17 @@ public class Car_Spawner : MonoBehaviour
                 break;
             }
         }
-        Vector2 carSpawnPosition ;
+        Vector2 carSpawnPosition;
         if (!isForwardLane)
         {
             carRotation = Quaternion.Euler(0, 0, 180); // Backward direction
-            carSpawnPosition = new Vector2(selectedLaneXPosition, transform.position.y); // Adjust Y position for backward lanes
-
+            carSpawnPosition = new Vector2(selectedLaneXPosition, transform.position.y); // Y actual del spawner
         }
         else
         {
             carRotation = Quaternion.Euler(0, 0, 0); // Forward direction
-            carSpawnPosition = new Vector2(selectedLaneXPosition, -6f); // Adjust Y position for backward lanes
+            carSpawnPosition = new Vector2(selectedLaneXPosition, -6f); // Y fijo para forward
         }
-
-        //GameObject spawnedCar = Instantiate(cars[carIndexToSpawn], new Vector2(selectedLaneXPosition, transform.position.y), carRotation);
 
         // Instanciar el auto
         GameObject spawnedCar = Instantiate(cars[carIndexToSpawn], carSpawnPosition, carRotation);
@@ -135,20 +149,18 @@ public class Car_Spawner : MonoBehaviour
         // Obtener el script Car_Movement del auto instanciado
         Car_Movement carMovement = spawnedCar.GetComponent<Car_Movement>();
 
-
-
-
         if (!isForwardLane)
         {
-            carMovement.speed = 7f; // O el valor que quieras
-            carMovement.direction = Vector2.down; // O la dirección que quieras
+            carMovement.speed = 7f;
+            carMovement.direction = Vector2.down;
         }
         else
         {
-            carMovement.speed = 0.5f; // O el valor que quieras
-            carMovement.direction = Vector2.up; // O la dirección que quieras
+            carMovement.speed = 2.5f;
+            carMovement.direction = Vector2.up;
         }
     }
+
     IEnumerator SpawnCars()
     {
         while (true)

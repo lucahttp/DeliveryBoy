@@ -37,6 +37,20 @@ public class Player_Movement : MonoBehaviour
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, 47), rotationSpeed * Time.deltaTime);
 
         }
+
+
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            transform.position += new Vector3(0, speed * Time.deltaTime, 0);
+            //transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, -90), rotationSpeed * Time.deltaTime);
+
+        }
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            transform.position -= new Vector3(0, speed * Time.deltaTime, 0);
+            //transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, 90), rotationSpeed * Time.deltaTime);
+
+        }
         if (transform.rotation.z != 90)
         {
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, 0), 10f * Time.deltaTime);
@@ -59,6 +73,10 @@ if (transform.position.x > 1.62f)
 */
         Vector3 pos = transform.position;
         pos.x = Mathf.Clamp(pos.x, -1.62f, 1.62f);
+
+
+        pos.y = Mathf.Clamp(pos.y, -4.3f, 4.3f);
+
         transform.position = pos;
     }
 
