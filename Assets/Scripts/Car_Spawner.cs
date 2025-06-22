@@ -166,7 +166,7 @@ public class Car_Spawner : MonoBehaviour
         while (true)
         {
             SpawnSpecificCar();
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
         }
     }
 }
