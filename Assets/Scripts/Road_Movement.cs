@@ -5,9 +5,19 @@ public class Road_Movement : MonoBehaviour
 {
     public Renderer meshRenderer;
     public float speed = 1f;
-    // Update is called once per frame // 
+
+    public float totalDistance = 0f; // Total distance the road has moved
+
+    public delegate void MileageChanged(float mileage);
+    public event MileageChanged OnMileageChanged;
+
     void Update()
     {
-        meshRenderer.material.mainTextureOffset += new Vector2(0, speed * Time.deltaTime);
+        float distanceThisFrame = speed * Time.deltaTime;
+        meshRenderer.material.mainTextureOffset += new Vector2(0, distanceThisFrame);
+        totalDistance += distanceThisFrame;
+
+        // Notify listeners (e.g., Score_Manager) of mileage update
+        OnMileageChanged?.Invoke(totalDistance);
     }
 }
