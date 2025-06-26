@@ -7,8 +7,9 @@ public class Start_Menu_Controller : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void onStartClick()
     {
-        SceneManager.LoadScene("SampleScene");
         Debug.Log("Start button clicked, loading SampleScene.");
+        //SceneManager.LoadScene("SampleScene");
+        //SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
     }
 
     // Update is called once per frame

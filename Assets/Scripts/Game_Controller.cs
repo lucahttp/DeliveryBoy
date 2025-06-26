@@ -50,4 +50,19 @@ public class Game_Controller : MonoBehaviour
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         SceneManager.LoadScene("SampleScene");
     }
+    public void goToMenu()
+    {
+        // Reset the score and high score
+        score = 0;
+        highScore = 0;
+        Debug.Log("Restarting game." );
+
+        // Update the UI text components
+        scoreText.text = "Puntos: " + score;
+        highScoreText.text = "High Score: " + highScore;
+
+        // Reload the current scene to restart the game
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("HomeScreen", LoadSceneMode.Single);
+    }
 }

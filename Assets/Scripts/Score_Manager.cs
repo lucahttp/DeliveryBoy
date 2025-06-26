@@ -19,6 +19,10 @@ public class Score_Manager : MonoBehaviour
     private bool thankYouMoving = false;
     public float thankYouSpeed = 2f; // Adjust as needed
 
+    public Transform playerTransform; // Assign this in the inspector
+
+    public GameObject congratulationsPanel; // Reference to the Game Over panel
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -37,18 +41,21 @@ public class Score_Manager : MonoBehaviour
     {
         scoreText.text = "Puntos: " + score;
         if (mileageText != null)
-            mileageText.text = "Millas: " + mileage.ToString("F1");
+            mileageText.text = "Distancia: " + mileage.ToString("F1") +" km"; // Update mileage text;
 
         // Move thankYouPanelInstance if needed
         if (thankYouMoving)
         {
             Vector3 pos = thankYouPanelInstance.transform.position;
             pos.y -= thankYouSpeed * Time.unscaledDeltaTime; // Move down (opposite to street)
-            if (pos.y <= 1.8f)
+            if (playerTransform != null && pos.y <= playerTransform.position.y)
             {
-                pos.y = 1.8f;
+                pos.y = playerTransform.position.y;
                 thankYouMoving = false;
+
+                Debug.Log("Order Delivered detected!");
                 Time.timeScale = 0; // Stop the game
+                congratulationsPanel.SetActive(true);
             }
             thankYouPanelInstance.transform.position = pos;
         }
