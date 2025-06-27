@@ -18,7 +18,7 @@ public class Home_Controller : MonoBehaviour
     public void onStartClick()
     {
         Debug.Log("Button clicked!");
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("MainGameScene");
     }
     public void onButtonCreditsClick()
     {

@@ -8,7 +8,7 @@ public class Score_Manager : MonoBehaviour
     public int score = 0;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI mileageText; // Add this in the inspector
-
+    public TextMeshProUGUI gameOverMileageLabel; // Add this in the inspector
     public Road_Movement roadMovement; // Assign this in the inspector
 
     private float mileage = 0f;
@@ -22,7 +22,7 @@ public class Score_Manager : MonoBehaviour
     public Transform playerTransform; // Assign this in the inspector
 
     public GameObject congratulationsPanel; // Reference to the Game Over panel
-
+    public TextMeshProUGUI gameOverLabel; // Reference to the Game Over panel text
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -39,9 +39,11 @@ public class Score_Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = "Puntos: " + score;
+        scoreText.text = "BandidoPoints: " + score;
         if (mileageText != null)
             mileageText.text = "Distancia: " + mileage.ToString("F1") +" km"; // Update mileage text;
+            gameOverMileageLabel.text = "Distancia: " + mileage.ToString("F1") +" km"; // Update the high score UI text
+
 
         // Move thankYouPanelInstance if needed
         if (thankYouMoving)
@@ -52,9 +54,11 @@ public class Score_Manager : MonoBehaviour
             {
                 pos.y = playerTransform.position.y;
                 thankYouMoving = false;
-
+                gameOverMileageLabel.text = "Distancia: " + mileage.ToString("F1") +" km"; // Update the high score UI text
                 Debug.Log("Order Delivered detected!");
+                gameOverLabel.text = "¡Pedido Entregado!"; // Update the high score UI text
                 Time.timeScale = 0; // Stop the game
+
                 congratulationsPanel.SetActive(true);
             }
             thankYouPanelInstance.transform.position = pos;

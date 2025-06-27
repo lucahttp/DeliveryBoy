@@ -1,4 +1,3 @@
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,7 +7,7 @@ public class Start_Menu_Controller : MonoBehaviour
     public void onStartClick()
     {
         Debug.Log("Start button clicked, loading SampleScene.");
-        //SceneManager.LoadScene("SampleScene");
+        //SceneManager.LoadScene("MainGameScene");
         //SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
     }
 

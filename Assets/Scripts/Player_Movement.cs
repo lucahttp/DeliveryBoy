@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using TMPro; // Add TextMeshPro namespace
+
 public class Player_Movement : MonoBehaviour
 {
     public Transform transform;
@@ -10,6 +12,7 @@ public class Player_Movement : MonoBehaviour
 
     public Score_Manager scoreValue;
 
+    public TextMeshProUGUI gameOverLabel; // Change to TextMeshProUGUI component
 
     public GameObject gameOverPanel; // Reference to the Game Over panel
     void Start()
@@ -94,6 +97,9 @@ if (transform.position.x > 1.62f)
             Debug.Log("Collision with car detected!");
             Debug.Log(collision.gameObject.name);
             Time.timeScale = 0;
+
+            gameOverLabel.text = "Pediste Loro"; // Update the high score UI text
+
             gameOverPanel.SetActive(true);
         }
         else if (collision.gameObject.tag == "Coins")
