@@ -37,8 +37,8 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           targetPlatform: WebGL
-          buildName: Build
-          buildPath: dist
+          # buildName: Build
+          # buildPath: dist
 
   deploy:
     needs: build
@@ -53,7 +53,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'dist/Build/WebGL'
+          name: Build-WebGL
+          path: build/WebGL
       
       - name: Deploy to GitHub Pages
         id: deployment
