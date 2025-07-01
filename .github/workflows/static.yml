@@ -37,8 +37,15 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           targetPlatform: WebGL
-          # buildName: Build
-          # buildPath: dist
+          # buildName: TuJuegoWebGL # Opcional: puedes darle un nombre específico
+          # buildPath: build/WebGL # Opcional: El path de salida por defecto ya es 'build/<targetPlatform>'
+
+      - name: Upload Unity Build Artifact
+        uses: actions/upload-artifact@v4 # Usa actions/upload-artifact para subir el resultado
+        with:
+          name: webgl-build # Un nombre para tu artefacto
+          path: build/WebGL/ # La ruta donde Unity Builder guarda la compilación WebGL
+          retention-days: 1 # Opcional: Cuántos días quieres retener el artefacto
 
   deploy:
     needs: build
@@ -47,15 +54,22 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - name: Download Unity Build Artifact
+        uses: actions/download-artifact@v4 # Descarga el artefacto generado en el trabajo 'build'
+        with:
+          name: webgl-build # Debe coincidir con el nombre usado en upload-artifact
+          path: ./build/WebGL # Descarga el contenido del artefacto a esta ruta
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          name: Build-WebGL
-          path: build/WebGL
-      
+          # Aquí, la ruta ahora apunta a la carpeta donde descargaste el artefacto
+          path: ./build/WebGL 
+          name: Build-WebGL # Puedes mantener el mismo nombre o cambiarlo si lo deseas
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
