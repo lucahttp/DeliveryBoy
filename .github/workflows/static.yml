@@ -79,3 +79,23 @@ jobs:
         # If you wanted a different name, you would specify it here:
         # with:
         #   artifact_name: YourCustomArtifactName
+
+  publish-itchio:
+    name: Publish to itch.io
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Unity Build Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: webgl-build
+          path: ./build/WebGL
+
+      - name: Publish to itch.io with Butler
+        uses: yeslayla/butler-publish-itchio-action@master
+        env:
+          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
+          CHANNEL: HTML
+          ITCH_GAME: deliveryboy
+          ITCH_USER: lucaelduelista
+          PACKAGE: ./build/WebGL
