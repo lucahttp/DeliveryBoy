@@ -41,11 +41,11 @@ jobs:
           # buildPath: build/WebGL # Opcional: El path de salida por defecto ya es 'build/<targetPlatform>'
 
       - name: Upload Unity Build Artifact
-        uses: actions/upload-artifact@v4 # Usa actions/upload-artifact para subir el resultado
+        uses: actions/upload-artifact@v4 # Uses actions/upload-artifact to upload the result
         with:
-          name: webgl-build # Un nombre para tu artefacto
-          path: build/WebGL/ # La ruta donde Unity Builder guarda la compilación WebGL
-          retention-days: 1 # Opcional: Cuántos días quieres retener el artefacto
+          name: webgl-build # A name for your artifact
+          path: build/WebGL/ # The path where Unity Builder saves the WebGL build
+          retention-days: 1 # Optional: How many days you want to retain the artifact
 
   deploy:
     needs: build
@@ -55,21 +55,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download Unity Build Artifact
-        uses: actions/download-artifact@v4 # Descarga el artefacto generado en el trabajo 'build'
+        uses: actions/download-artifact@v4 # Downloads the artifact generated in the 'build' job
         with:
-          name: webgl-build # Debe coincidir con el nombre usado en upload-artifact
-          path: ./build/WebGL # Descarga el contenido del artefacto a esta ruta
+          name: webgl-build # Must match the name used in upload-artifact
+          path: ./build/WebGL # Downloads the artifact content to this path
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload artifact
+      - name: Upload artifact for GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          # Aquí, la ruta ahora apunta a la carpeta donde descargaste el artefacto
-          path: ./build/WebGL 
-          name: Build-WebGL # Puedes mantener el mismo nombre o cambiarlo si lo deseas
+          # Here, the path now points to the folder where you downloaded the artifact
+          path: ./build/WebGL
+          # IMPORTANT: Change the artifact name to 'github-pages'
+          # This is the default name expected by actions/deploy-pages@v4
+          name: github-pages
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        # No need to specify artifact_name here, as 'github-pages' is the default
+        # If you wanted a different name, you would specify it here:
+        # with:
+        #   artifact_name: YourCustomArtifactName
